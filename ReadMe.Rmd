@@ -1,0 +1,36 @@
+---
+title: "README"
+author: "Angel Medina"
+date: "Thursday, February 19, 2015"
+output: html_document
+---
+###Clarifications
+This script starts with the assumption that the Samsung data is available in the working directory in an unzipped UCI HAR Dataset folder it also assumes that the "dply" package has been installed and loaded.
+
+
+###How does the script work?
+This procedure ignores the inertial folder included in the UCI HAR Dataset folder, since it is not needed for any of the steps marked on the course project instructions.
+
+The function, as the course project instructions point, is named run_analysis.
+It reads each one of the seven files (test(3), train(3), features) into R and it assigns the names to all the variables because I thought that if I did that step first it would be so much easier to merge and extract the mean and std related columns.
+
+After assigning the names, it merges train activity and subject files together and the same test files, the it puts both files together so we have all the subjects with all the activities they performed.
+
+From the "x_test" and "x_train" merged files it extracts the mean and std related columns with the grepl() function and the resulting subset is merged with the activities and subjects object.
+Then all the numeric values of Activity are changed to describing values like "Walking", "Laying", etc, according to the activity_labels file in the UCI HAR Dataset.
+
+The tidy data is stored in the variable named complete inside the script.
+
+####At this point the script has achieved step 4 of the course project.
+
+The step 5 is achivied by grouping the table with the group_by() function by both the Subject and Activity variables and then usin the summarise_each() for applying the mean to each of the grouped table columns.
+Then the scripts takes the names of the variables and changes them to proper variable names since the original had mistakes like "BodyBody", and weren´t describing enough like "fBody". 
+The new variable names are explained in the code book. I decided to change the Variable names because of the posts in the David´s Course Project FAQ. 
+
+https://class.coursera.org/getdata-011/forum/thread?thread_id=69#comment-713
+
+####Output
+After Running the run_analysis() a "dataoutput.txt" has beed written in your working directory, you need to read the output into R with the following comand: 
+read.table("dataoutput.txt", header=TRUE),
+since its a "large"" table I recoomend storing it into a variable when reading it. 
+

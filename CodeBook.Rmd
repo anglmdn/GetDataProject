@@ -1,0 +1,414 @@
+---
+title: "CodeBook"
+author: "Angel Medina"
+date: "Friday, February 20, 2015"
+output: html_document
+---
+This CodeBook explain the meaning of each variable name included in the output of the run_analysis (that in fact shows averages of each variable), its name, class and standar values. 
+
+The number in front of the variable name indicates the maximun number of digits or decimals
+
+*Subject  2
+-Number of the Subject that performed the activity
+-Integer
+-Values Between 1 and 30. (Total of subjects)
+
+*Activity
+-Ativity performed by the indicated subject.
+-Character
+--Walkig
+--Walking Upstairs
+--Walking Downtairs
+--Standing
+--Stting
+--Laying
+
+
+*TimeBodyAccMeanX   8
+-Time Body Acceleration on the X axis mean
+-Numeric
+-Absolute value < 1
+
+TimeBodyAccMeanY   8
+-Time Body Acceleration on the Y axis mean
+-Numeric
+-Absolute value < 1
+
+TimeBodyAccMeanZ   8
+-Time Body Acceleration on the Z axis mean
+-Numeric
+-Absolute value < 1
+
+TimeBodyAccStdX   8
+-Time Body Acceleration on the X axis Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyAccStdY   8
+-Time Body Acceleration on the Y axis Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyAccStdZ   8 
+-Time Body Acceleration on the z axis Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+
+TimeGravitytAccMeanX   8
+-Time Gravity Acceleration Mean on the X axis
+-Numeric
+Absolute value < 1
+
+TimeGravitytAccMeanY   8
+-Time Gravity Acceleration Mean on the Y axis
+-Numeric
+Absolute value < 1
+
+TimeGravitytAccMeanZ   8
+-Time Gravity Acceleration Mean on the Z axis
+-Numeric
+Absolute value < 1
+
+TimeGravitytAccStdX   8
+-Time Gravity Acceleration Standard Deviation on the X axis
+-Numeric (Negative)
+Absolute value < 1
+
+TimeGravitytAccStdY   8
+-Time Gravity Acceleration Standard Deviation on the Y axis
+-Numeric (Negative)
+Absolute value < 1
+
+TimeGravitytAccStdZ   8
+-Time Gravity Acceleration Standard Deviation on the Z axis
+-Numeric (Negative)
+Absolute value < 1
+
+TimeBodyAccJerkMeanX   8
+-Time Body Acceleration Jerk Mean on the X axis
+-Numeric
+-Absolute Value < 1
+
+TimeBodyAccJerkMeanY   8
+-Time Body Acceleration Jerk Mean on the Y axis
+-Numeric
+-Absolute Value < 1
+
+TimeBodyAccJerkMeanZ   8
+-Time Body Acceleration Jerk Mean on the Z axis
+-Numeric
+-Absolute Value < 1
+
+TimeBodyAccJerkStdX   8
+-Time Body Acceleration Jerk Standard Deviation on the X axis
+-Numeric (Negative)
+-Absolute Value < 1
+
+TimeBodyAccJerkStdY   8
+-Time Body Acceleration Jerk Standard Deviation on the Y axis
+-Numeric (Negative)
+-Absolute Value < 1
+
+TimeBodyAccJerkStdZ   8
+-Time Body Acceleration Jerk Standard Deviation on the Z axis
+-Numeric (Negative)
+-Absolute Value < 1
+
+TimeBodyGyroMeanX   8
+-Time Body Gyro Mean on the X axis
+-Numeric
+-Absolute value < 1
+
+TimeBodyGyroMeanY   8
+-Time Body Gyro Mean on the Y axis
+-Numeric
+-Absolute value < 1
+
+TimeBodyGyroMeanZ   8
+-Time Body Gyro Mean on the Z axis
+-Numeric
+-Absolute value < 1
+
+TimeBodyGyroStdX   8
+-Time Body Gyro Mean on the X axis
+-Numeric
+-Absolute value < 1
+
+TimeBodyGyroStdY   8
+-Time Body Gyro Mean on the Y axis
+-Numeric
+-Absolute value < 1
+
+TimeBodyGyroStdZ   8
+-Time Body Gyro Mean on the Z axis
+-Numeric
+-Absolute value < 1
+
+TimeBodyGyroJerkMeanX   8
+-On the X axis
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroJerkMeanY   8
+-On the Y axis
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroJerkMeanZ   8
+-On the Z axis
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroJerkStdX   8
+-Time Body Gyro Jerk Standard Deviation on the X axis
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroJerkStdY   8
+-Time Body Gyro Jerk Standard Deviation on the Y axis
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroJerkStdZ   8
+-Time Body Gyro Jerk Standard Deviation on the Z axis
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyAccMagMean   8
+-Time Body Acceleration Magnitude Mean
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyAccMagStd   8   
+-Time Body Acceleration Magnitude Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+TimeGravitytAccMagMean   8
+-Time Gravity Acceleration Magnitude Mean
+-Numeric (negative)
+-Absolute value < 1
+
+TimeGravitytAccMagStd   8
+-Time Gravity Acceleration Magnitude Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyAccJerkMagMean   8
+-Time Body Acceleration Jerk Magnitude Mean
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyAccJerkMagStd   8 
+-Time Body Acceleration Jerk Magnitude Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroMagMean   8
+-Time Body Gyro Magnitude Mean
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroMagStd   8
+-Time Body Gyro Magnitude Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroJerkMagMean   8 
+-Time Body Gyro Jerk Magnitude  Mean
+-Numeric (negative)
+-Absolute value < 1
+
+TimeBodyGyroJerkMagStd   8 
+-Time Body Gyro Jerk Magnitude Standard Deviation
+-Numeric (negative)
+-Absolute value < 1
+
+FrecBodyAccMeanX 
+-Frequency Body Acceleration Mean on the X axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccMeanY 
+-Frequency Body Acceleration Mean on the Y axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccMeanZ 
+-Frequency Body Acceleration Mean on the Z axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccStdX 
+-Frequency Body Acceleration Standard Deviation on the X axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccStdY
+-Frequency Body Acceleration Standard Deviation on the Y axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccStdZ
+-Frequency Body Acceleration Standard Deviation on the Z axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccMeanFreqX       
+-Frequency Body Acceleration Mean on the X axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccMeanFreqY
+-Frequency Body Acceleration Mean on the Y axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccMeanFreqZ
+-Frequency Body Acceleration Mean on the Z axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccJerkMeanX  
+-Frequency Body Acceleration Jerk Mean on the X axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccJerkMeanY
+-Frequency Body Acceleration Jerk Mean on the Y axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccJerkMeanZ
+-Frequency Body Acceleration Jerk Mean on the Z axis
+-Numeric (Negative)
+-Absolute value < 1
+
+FrecBodyAccJerkStdX 
+-Frequency Body Acceleration Standard Deviation on the X axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccJerkStdY
+-Frequency Body Acceleration Standard Deviation on the Y axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccJerkStdZ 
+-Frequency Body Acceleration Standard Deviation on the Z axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccJerkMeanFreqX 
+-Frequency Body Acceleration Jerk Mean Frequency on the X axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccJerkMeanFreqY
+-Frequency Body Acceleration Jerk Mean Frequency on the Y axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccJerkMeanFreqZ
+-Frequency Body Acceleration Jerk Mean Frequency on the Z axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroMeanX
+-Frequency Body Gyro Mean on the X axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroMeanY 
+-Frequency Body Gyro Mean on the Y axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroMeanZ
+-Frequency Body Gyro Mean on the Z axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroStdX
+-Frequency Body Gyro Standard Deviation on the X axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroStdY
+-Frequency Body Gyro Standard Deviation on the Y axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroStdZ
+-Frequency Body Gyro Standard Deviation on the Z axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroMeanFreqX 
+-Frequency Body Gyro Mean Frequency on the X axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroMeanFreqY
+-Frequency Body Gyro Mean Frequency on the Y axis
+-Numeric
+-Absolute value < 1
+
+FrecBodyGyroMeanFreqZ
+-Frequency Body Gyro Mean Frequency on the Z axis
+-Numeric
+-Absolute value < 1
+
+
+FrecBodyAccMagMean
+-Frequency Body Acceleration Magnitude Mean
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccMagStd
+-Frequency Body Acceleration Magnitude Standard Deviation
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccMagMeanFreq
+-Frequency Body Acceleration Magnitude Frequency
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccJerkMagMean
+-Frequency Body Acceleration Magnitude Mean
+-Numeric
+-Absolute value < 1
+
+FrecBodyAccJerkMagStd
+-Frequency Body Acceleration Magnitude Standard Deviation
+-Numeric [-1, 1]
+-Absolute value < 1
+
+FrecBodyAccJerkMagMeanFreq
+-Frequency Body Gyro Magnitude Mean Frequency
+-Numeric [-1, 1]
+-Absolute value < 1
+
+FrecBodyGyroMagMean
+-Frequency Body Gyro Magnitude Mean
+-Numeric [-1, 1]
+-Absolute value < 1
+
+FrecBodyGyroMagStd
+-Frequency Body Gyro Magnitude Standard Deviation
+-Numeric [-1, 1]
+-Absolute value < 1
+
+FrecBodyGyroMagMeanFreq    
+FrecBodyGyroJerkMagMean     
+FrecBodyGyroJerkMagStd
+-Frequency Body Gyro Jerk Magnitude Standard Deviation
+-Numeric [-1, 1]
+-Absolute value < 1
+
+FrecBodyGyroJerkMagMeanFreq
+-Frequency Body Gyro Jerk Magnitude Mean Frequency
+-Numeric [-1, 1]
+-Absolute value < 1
