@@ -14,14 +14,14 @@ The number in front of the variable name indicates the maximun number of digits 
   * Values Between 1 and 30. (Total of subjects)
 
 2. Activity
-- Ativity performed by the indicated subject.
-- Character
-* Walkig
-* Walking Upstairs
-* Walking Downtairs
-* Standing
-* Sitting
-* Laying
+  - Ativity performed by the indicated subject.
+  - Character
+  * Walkig
+  * Walking Upstairs
+  * Walking Downtairs
+  * Standing
+  * Sitting
+  * Laying
 
 
 3. TimeBodyAccMeanX   8
@@ -30,65 +30,65 @@ The number in front of the variable name indicates the maximun number of digits 
   - Absolute value < 1
 
 4. TimeBodyAccMeanY   8
-- Time Body Acceleration on the Y axis mean
-- Numeric
-- Absolute value < 1
+  - Time Body Acceleration on the Y axis mean
+  - Numeric
+  - Absolute value < 1
 
 5. TimeBodyAccMeanZ   8
-- Time Body Acceleration on the Z axis mean
-- Numeric
-- Absolute value < 1
+  - Time Body Acceleration on the Z axis mean
+  - Numeric
+  - Absolute value < 1
 
 6. TimeBodyAccStdX   8
-- Time Body Acceleration on the X axis Standard Deviation
-- Numeric (negative)
-- Absolute value < 1
+  - Time Body Acceleration on the X axis Standard Deviation
+  - Numeric (negative)
+  - Absolute value < 1
 
 7. TimeBodyAccStdY   8
-- Time Body Acceleration on the Y axis Standard Deviation
-- Numeric (negative)
-- Absolute value < 1
+  - Time Body Acceleration on the Y axis Standard Deviation
+  - Numeric (negative)
+  - Absolute value < 1
 
 8. TimeBodyAccStdZ   8 
-- Time Body Acceleration on the z axis Standard Deviation
-- Numeric (negative)
-- Absolute value < 1
+  - Time Body Acceleration on the z axis Standard Deviation
+  - Numeric (negative)
+  - Absolute value < 1
 
 
 9. TimeGravitytAccMeanX   8
-- Time Gravity Acceleration Mean on the X axis
-- Numeric
-- Absolute value < 1
+  - Time Gravity Acceleration Mean on the X axis
+  - Numeric
+  - Absolute value < 1
 
 10. TimeGravitytAccMeanY   8
-- Time Gravity Acceleration Mean on the Y axis
-- Numeric
-- Absolute value < 1
+  - Time Gravity Acceleration Mean on the Y axis
+  - Numeric
+  - Absolute value < 1
 
 12. TimeGravitytAccMeanZ   8
-- Time Gravity Acceleration Mean on the Z axis
-- Numeric
-- Absolute value < 1
+  - Time Gravity Acceleration Mean on the Z axis
+  - Numeric
+  - Absolute value < 1
 
 13. TimeGravitytAccStdX   8
-- Time Gravity Acceleration Standard Deviation on the X axis
-- Numeric (Negative)
-- Absolute value < 1
+  - Time Gravity Acceleration Standard Deviation on the X axis
+  - Numeric (Negative)
+  - Absolute value < 1
 
 14. TimeGravitytAccStdY   8
-- Time Gravity Acceleration Standard Deviation on the Y axis
-- Numeric (Negative)
-- Absolute value < 1
+  - Time Gravity Acceleration Standard Deviation on the Y axis
+  - Numeric (Negative)
+  - Absolute value < 1
 
 15. TimeGravitytAccStdZ   8
-- Time Gravity Acceleration Standard Deviation on the Z axis
-- Numeric (Negative)
-- Absolute value < 1
+  - Time Gravity Acceleration Standard Deviation on the Z axis
+  - Numeric (Negative)
+  - Absolute value < 1
 
 16. TimeBodyAccJerkMeanX   8
-- Time Body Acceleration Jerk Mean on the X axis
-- Numeric
-- Absolute Value < 1
+  - Time Body Acceleration Jerk Mean on the X axis
+  - Numeric
+  - Absolute Value < 1
 
 17. TimeBodyAccJerkMeanY   8
 - Time Body Acceleration Jerk Mean on the Y axis
