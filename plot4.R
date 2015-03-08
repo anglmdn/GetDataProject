@@ -1,0 +1,25 @@
+data <- read.csv("household_power_consumption.txt", header=TRUE, sep=";")[66638:69517,]
+
+par(mfrow=c(2, 2), mar=c(4, 4, 1, 1))
+
+Sys.setlocale("LC_TIME", "English")
+data$Newdate<-paste(data$Date, data$Time)
+data$Newdate<-strptime(data$Newdate, "%d/%m/%Y %H:%M:%S")
+data$Global_active_power<-as.numeric(as.character(data$Global_active_power))
+data$Voltage<-as.numeric(as.character(data$Voltage))
+data$Global_reactive_power<-as.numeric(as.character(data$Global_reactive_power))
+data$Sub_metering_1<-as.numeric(as.character(data$Sub_metering_1))
+data$Sub_metering_3<-as.numeric(as.character(data$Sub_metering_3))
+data$Sub_metering_2<-as.numeric(as.character(data$Sub_metering_2))
+png("plot4.png")
+par(mfrow=c(2, 2), mar=c(4, 4, 1, 1))
+with(data, {
+  plot(Newdate, Global_active_power, type="l",ylab="Global Active Power (kilowatts)", xlab="")
+  plot(Newdate, Voltage, type="l", lwd=.05, ylab="Voltage", xlab="datetime")
+  plot(Newdate, Sub_metering_1, type="l", lwd=.05, ylab="Energy Sub Metering", xlab="")
+  lines(Newdate, Sub_metering_2, type="l", col="red",lwd=.05)
+  lines(Newdate, Sub_metering_3, type="l", col="blue", lwd=.05)
+  legend("topright", lwd= 1,bty="n", col=c("black", "red", "blue"), legend=c("Sub Metering 1", "Sub Metering 2", "Sub Metering 3"))
+  plot(Newdate, Global_reactive_power, type="l", lwd=.05, ylab="Global_reactive_Power", xlab="datetime")
+  })
+dev.off()
