@@ -1,0 +1,86 @@
+###Modelo de regresión múltiple
+capa<-c(4330,5500,5500,4700,5200,5500,4700,5500,5800,5000)#Capacidad o tamaño de la mochila independiente (x2)
+calidad<-c(2,3,4,3,4,4,4,5,5,5)#independiente(x1),5 peor calidad
+precio<-c(190,219,249,249,250,340,289,395,439,525)#variable dependiente(y)
+
+#primero aplicamos una correlación
+mochil<-data.frame(precio,capa,calidad)
+mochil1<-mochil[c(-1,-7,-10),]#[renglones,columnas], el menos significa quitar
+cor(mochil,use="everything",method = "pearson")
+##observamos que las variables tienen correlaciones diversas
+#aplicamos el modelo,pero como ejemplo aplicaremos el modelo
+modmo<-lm(precio~calidad+capa)
+summary(modmo)
+#se revisa la R2 AJUSTADA POR SER UN modelo de regresion múltiple utilizamos la 
+#R ajustada de .704 lo que implica que que la recta de regresión explica en 70.4 por ciento 
+#la variabilidad del modelo, revisando el valor de F y P-value tenemos que si cumple con 
+#los criterios de un buen ajuste (F>1 Y P-VALUE<.05)
+#Con esto podemos mencionar que estamos ante un buen modelo por lo que se pasa al diagnostico 
+#El diagnostico se realiza para poder generalizar los resultados del modelo a partir de la revision de los supuestos
+#Lo primero que se hace en un modelo de regresion múltiple es observar gráficamente los supuestos 
+#En primer lugar se contrastan los valores residuales contra los valores ajustados 
+#Se realiza con la función plot y el argumento wich=1
+
+#1.supuesto: varianza constante
+plot(modmo,wich=1,pch=4)
+#Aqui esperamos que los residuos se distribuyan sin valor 
+#Una tendencia en la variabilidad de los residuos sugiere que la varianza está relacionada con la media,
+#violando el supuesto de la varianza constante 
+#wich es el tipo de supuesto que me va a comprobar el uno es para la varianza constante , el wich dos es para normalidad
+
+#2.Supuesto de normalidad
+plot(modmo,wich=2,pch=4)
+#En este caso esperamos que los residuos tipificados esten alrededor de la lines
+#Se observa que si hay distribución normal
+#3.Tercer supuesto
+#Los residuos están estandarizados por sus desviaciones estándar estimadas.
+plot(modmo,wich=3,pch=4)
+#aqui podemos ver si los residuos se distribuyen constantes en los valores ajustados , una gráfica sin patron observable
+#4. supuesto
+plot(modmo,wich=5,pch=4)
+#expone la importancia de cada observacion en el modelo
+#En esta distancia el gráfico nos muestra las observaciones que podrian impactar en el modelo#
+#por lo que sugiere eliminarlas 
+#eliminar entrada 1 , 7 y 10 se ve en este último gráfico
+
+
+
+help("lm")
+
+
+#Ahora todo lo haremos con mochil 1 para comprobar que se corrigieron los problemas
+#si quisieramos eliminar la columna dos que es capacidad mochil2<-mochil[,-2]
+cor(mochil1,use="everything",method = "pearson")
+##observamos que las variables tienen correlaciones diversas
+#aplicamos el modelo,pero como ejemplo aplicaremos el modelo
+modmo<-lm(precio~calidad+capa,mochil1)#Para eliminar de mis vectores iniciales los datos que no quiero, porque ya lo dirigí al que lo quité
+#Este seria otro modo de hacer lo anterior
+modmo<-lm(mochil1$precio~mochil1$calidad+mochil1$capa)
+#summary(modmo)
+#se revisa la R2 AJUSTADA POR SER UN modelo de regresion múltiple utilizamos la 
+#R ajustada de .704 lo que implica que que la recta de regresión explica en 70.4 por ciento 
+#la variabilidad del modelo, revisando el valor de F y P-value tenemos que si cumple con 
+#los criterios de un buen ajuste (F>1 Y P-VALUE<.05)
+#Con esto podemos mencionar que estamos ante un buen modelo por lo que se pasa al diagnostico 
+#El diagnostico se realiza para poder generalizar los resultados del modelo a partir de la revision de los supuestos
+#Lo primero que se hace en un modelo de regresion múltiple es observar gráficamente los supuestos 
+#En primer lugar se contrastan los valores residuales contra los valores ajustados 
+#Se realiza con la función plot y el argumento wich=1
+
+#1.supuesto: varianza constante
+plot(modmo,wich=1,pch=4)
+#Aqui esperamos que los residuos se distribuyan sin valor 
+#Una tendencia en la variabilidad de los residuos sugiere que la varianza está relacionada con la media,
+#violando el supuesto de la varianza constante 
+#wich es el tipo de supuesto que me va a comprobar el uno es para la varianza constante , el wich dos es para normalidad
+
+#2.Supuesto de normalidad
+plot(modmo,wich=2,pch=4)
+#En este caso esperamos que los residuos tipificados esten alrededor de la lines
+#Se observa que si hay distribución normal
+#3.Tercer supuesto
+#Los residuos están estandarizados por sus desviaciones estándar estimadas.
+plot(modmo,wich=3,pch=4)
+#aqui podemos ver si los residuos se distribuyen constantes en los valores ajustados , una gráfica sin patron observable
+#4. supuesto
+plot(modmo,wich=5,pch=4)
